@@ -23,7 +23,7 @@ app.factory('routeStore', function(dispatcher, $rootScope, $state, $location) {
   return dispatcher.registerStore({
     storeName: 'routeStore',
     currentRoute: undefined,
-    pathChangedInternally: undefined,
+    pathChangedInternally: false,
 
     router: new Router({  // this is routr    https://github.com/yahoo/routr
 
@@ -35,8 +35,12 @@ app.factory('routeStore', function(dispatcher, $rootScope, $state, $location) {
       about: {
         path: '/about',
         method: 'get'
-      }
+      },
 
+      stuck: {
+        path: '/stuck',
+        method: 'get'
+      }
     }),
 
     getRouteFromPath: function (path) {

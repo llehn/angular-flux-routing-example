@@ -1,3 +1,10 @@
+app.directive('stuck', function() {
+  return {
+    restrict: 'E',
+    scope: {},
+    templateUrl: 'stuck.html'
+  }
+});
 
 app.directive('home', function() {
   return {
@@ -13,6 +20,9 @@ app.controller('HomeCtrl', function($scope, colorUtils, colorStore, actionCreato
   $scope.fcolor = colorUtils.fcolor;
   $scope.aboutClick = function() {
     actionCreator.goto({path:'/about'});
+  };
+  $scope.stuckClick = function() {
+    actionCreator.goto({path:'/stuck'});
   };
 });
 

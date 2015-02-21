@@ -51,6 +51,10 @@ app.factory('actionCreator', function (dispatcher, colorApi, aboutApi, colorStor
 
       return false;
     },
+    
+    stuck: function(route) {
+    
+    },
 
     toggleColor: function(payload) {
       dispatcher.dispatch('toggle:color', payload);

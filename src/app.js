@@ -61,6 +61,7 @@ app.config(function($locationProvider, $stateProvider) {
 
     .state('home', { template: '<home />' })
     .state('about', { template: '<about />' })
+    .state('stuck', { template: '<stuck />' })
 
 });
 
